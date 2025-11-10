@@ -17,8 +17,39 @@ Reduce PDF file size.
 
 ```bash
 git clone https://github.com/Inc44/dietpdf.git
-cd dietpdf-bin // dietpdf
+cd dietpdf-bin # dietpdf
 makepkg -si
+```
+
+## 📦 Publish
+
+```bash
+mkdir ~/aur
+mkdir ~/aur/dietpdf-bin # dietpdf
+cd ~/aur/dietpdf-bin # dietpdf
+```
+
+Create:
+
+```bash
+cp ~/github/dietpdf/dietpdf-bin/PKGBUILD . # dietpdf
+makepkg --printsrcinfo > .SRCINFO
+git -c init.defaultBranch=master init
+git add PKGBUILD .SRCINFO
+git commit -m "dietpdf-bin" # dietpdf
+git remote add aur ssh://aur@aur.archlinux.org/dietpdf-bin.git # dietpdf
+git push aur master
+```
+
+Update:
+
+```bash
+git clone ssh://aur@aur.archlinux.org/dietpdf-bin.git ~/aur/dietpdf-bin # dietpdf
+cp ~/github/dietpdf/dietpdf-bin/PKGBUILD . # dietpdf
+makepkg --printsrcinfo > .SRCINFO
+git add PKGBUILD .SRCINFO
+git commit -m "dietpdf-bin" # dietpdf
+git push
 ```
 
 ## 🙏 Thanks

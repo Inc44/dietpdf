@@ -1,21 +1,21 @@
 pkgbase = dietpdf
+	pkgdesc = Reduce PDF file size
 	pkgver = 1.0.0
 	pkgrel = 1
-	pkgdesc = Reduce PDF file size
 	url = https://github.com/Zigazou/dietpdf-haskell
 	arch = x86_64
 	license = BSD-3-Clause
-	source = git+https://github.com/Zigazou/dietpdf-haskell.git#tag=v1.0.0
-	depends = libjpeg-turbo
-	depends = imagemagick
 	makedepends = git
 	makedepends = ghc
 	makedepends = cabal-install
 	makedepends = llvm15
+	depends = libjpeg-turbo
+	depends = imagemagick
 	optdepends = ghostscript
 	optdepends = grok-jpeg2000
 	optdepends = ttfautohint
 	conflicts = dietpdf-bin
+	source = git+https://github.com/Zigazou/dietpdf-haskell.git#tag=v1.0.0
 	sha256sums = SKIP
 
 pkgname = dietpdf
